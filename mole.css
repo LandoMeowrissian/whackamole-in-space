@@ -7,11 +7,34 @@ body {
 
 
 .wgs {
+  display: inline-block;
   position: relative;
   height: 241px;
   width: 320px;
-
+  overflow: hidden;
 }
+
+.alien {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+.alien-hidden {
+  margin-top: 100%;
+}
+
+.ufo {
+  position: absolute;
+  height: 110px ;
+  width: 320px ;
+  top: 131px ;
+}
+
+
 
 
 
