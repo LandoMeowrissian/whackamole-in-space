@@ -17,18 +17,19 @@ body {
 }
 
 .grid {
-  display: grid(2, 4);
+  display: grid(4, 4);
 }
+
 
 .wgs {
   display: inline-block;
   position: relative;
-  height: 241px;
+  height: 241px; 
   width: 320px;
   overflow: hidden;
 }
 
-.alien1 {
+.alien {
   position: absolute;
   right: 54.5px;
   left: 77.5px;
@@ -37,7 +38,18 @@ body {
   transition: margin-top 0.25s;
 }
 
-.alien2 {
+.alien-hidden {
+  margin-top: 100%;
+}
+
+.ufo {
+  position: absolute;
+  height: 155px ;
+  width: 325px ;
+  top: 110px;
+}
+
+/* .alien2 {
   position: absolute;
   right: 54.5px;
   left: 77.5px;
@@ -116,19 +128,12 @@ body {
   height: 188px;
   width: 188px;
   transition: margin-top 0.25s;
-}
+}  */
 
 
-.alien-hidden {
- margin-top: 241px;
-}
 
-.ufo {
-  position: absolute;
-  height: 155px ;
-  width: 325px ;
-  top: 115px;
-}
+
+
 
 
 
