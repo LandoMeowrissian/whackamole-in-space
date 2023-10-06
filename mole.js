@@ -1,6 +1,6 @@
 let score = 0;
-let molesLeft = 30;
-let popupLength = 3000;
+let molesLeft = 100;
+let popupLength = 1500;
 let hideTimeout;
 let clickable = false;
 
@@ -10,37 +10,38 @@ function popUpRandomMole() {
     return;
   }
 
-  const moleHeads = document.querySelectorAll('.wgs__mole-head');
+  const moleHeads = document.querySelectorAll('.alien');
+  moleHeads.forEach(moleHead => moleHead.classList.add('alien-hidden'));
+
 
   if (moleHeads.length === 0) {
     return;
   }
   const moleIndex = Math.floor(Math.random() * moleHeads.length);
   const moleHead = moleHeads[moleIndex];
+  moleHead.classList.remove('alien-hidden');
 
   clickable = true;
-
-  // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED
-  // moleHead.classList.remove('wgs__mole-head--hidden', 'wgs__mole-head--whacked');
-
   molesLeft -= 1;
   document.querySelector('.sb__moles').innerHTML = molesLeft;
 
   hideTimeout = setTimeout(() => hideMole(moleHead), popupLength);
 }
 
+
 function hideMole(mole) {
   clickable = false;
-  mole.classList.add('wgs__mole-head--hidden');
+  mole.classList.add('alien-hidden');
 
-  setTimeout(popUpRandomMole, 500);
+  setTimeout(popUpRandomMole, 100);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(popUpRandomMole, 0);
+  setTimeout(popUpRandomMole, 100);
 
-  const moleHeads = document.querySelectorAll('.wgs__mole-head');
+  const moleHeads = document.querySelectorAll('.alien1');
   for (let moleHead of moleHeads) {
+    moleHead.classList.add('alien-hidden');
     moleHead.addEventListener('click', event => {
       if (!clickable) return;
 
@@ -52,98 +53,135 @@ window.addEventListener('DOMContentLoaded', () => {
       hideMole(event.target);
 
       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED
-      // event.target.classList.add('wgs__mole-head--hidden');
+      event.target.classList.add('alien-hidden');
 
       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED FOR THE BONUS
-      // event.target.classList.add('wgs__mole-head--whacked');
+      // event.target.classList.add('mole-head--whacked');
     });
   }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
+// function popUpRandomMole() {
+//   if (molesLeft <= 0) {
+//     document.querySelector('.sb__game-over').classList.remove('sb__game-over--hidden');
+//     return;
+//   }
 
-  setInterval(() => {
-    const moleHeads = document.querySelectorAll('.alien1');
-    for (let moleHead of moleHeads) {
-      moleHead.classList.toggle('alien-hidden');
-    }
-  }, 1000);
+//   const moleHeads = document.querySelectorAll('.alien2');
+//   moleHeads.forEach(moleHead => moleHead.classList.add('alien-hidden'));
 
-});
 
-window.addEventListener('DOMContentLoaded', () => {
+//   if (moleHeads.length === 0) {
+//     return;
+//   }
+//   const moleIndex = Math.floor(Math.random() * moleHeads.length);
+//   const moleHead = moleHeads[moleIndex];
+//   moleHead.classList.remove('alien-hidden');
 
-  setInterval(() => {
-    const moleHeads = document.querySelectorAll('.alien2');
-    for (let moleHead of moleHeads) {
-      moleHead.classList.toggle('alien-hidden');
-    }
-  }, 1000);
+//   clickable = true;
+//   molesLeft -= 1;
+//   document.querySelector('.sb__moles').innerHTML = molesLeft;
 
-});
+//   hideTimeout = setTimeout(() => hideMole(moleHead), popupLength);
+// }
 
-window.addEventListener('DOMContentLoaded', () => {
 
-  setInterval(() => {
-    const moleHeads = document.querySelectorAll('.alien3');
-    for (let moleHead of moleHeads) {
-      moleHead.classList.toggle('alien-hidden');
-    }
-  }, 1000);
+// function hideMole(mole) {
+//   clickable = false;
+//   mole.classList.add('alien-hidden');
 
-});
+//   setTimeout(popUpRandomMole, 100);
+// }
 
-window.addEventListener('DOMContentLoaded', () => {
+// window.addEventListener('DOMContentLoaded', () => {
+//   setTimeout(popUpRandomMole, 100);
 
-  setInterval(() => {
-    const moleHeads = document.querySelectorAll('.alien4');
-    for (let moleHead of moleHeads) {
-      moleHead.classList.toggle('alien-hidden');
-    }
-  }, 1000);
+//   const moleHeads = document.querySelectorAll('.alien2');
+//   for (let moleHead of moleHeads) {
+//     moleHead.classList.add('alien-hidden');
+//     moleHead.addEventListener('click', event => {
+//       if (!clickable) return;
 
-});
+//       score += 1;
+//       document.querySelector('.sb__score').innerHTML = score;
+//       popupLength -= popupLength / 10;
 
-window.addEventListener('DOMContentLoaded', () => {
+//       clearTimeout(hideTimeout);
+//       hideMole(event.target);
 
-  setInterval(() => {
-    const moleHeads = document.querySelectorAll('.alien5');
-    for (let moleHead of moleHeads) {
-      moleHead.classList.toggle('alien-hidden');
-    }
-  }, 1000);
+//       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED
+//       event.target.classList.add('alien-hidden');
 
-});
+//       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED FOR THE BONUS
+//       // event.target.classList.add('mole-head--whacked');
+//     });
+//   }
+// });
 
-window.addEventListener('DOMContentLoaded', () => {
+// function popUpRandomMole() {
+//   if (molesLeft <= 0) {
+//     document.querySelector('.sb__game-over').classList.remove('sb__game-over--hidden');
+//     return;
+//   }
 
-  setInterval(() => {
-    const moleHeads = document.querySelectorAll('.alien6');
-    for (let moleHead of moleHeads) {
-      moleHead.classList.toggle('alien-hidden');
-    }
-  }, 1000);
+//   const moleHeads = document.querySelectorAll('.alien3');
+//   moleHeads.forEach(moleHead => moleHead.classList.add('alien-hidden'));
 
-});
 
-window.addEventListener('DOMContentLoaded', () => {
+//   if (moleHeads.length === 0) {
+//     return;
+//   }
+//   const moleIndex = Math.floor(Math.random() * moleHeads.length);
+//   const moleHead = moleHeads[moleIndex];
+//   moleHead.classList.remove('alien-hidden');
 
-  setInterval(() => {
-    const moleHeads = document.querySelectorAll('.alien7');
-    for (let moleHead of moleHeads) {
-      moleHead.classList.toggle('alien-hidden');
-    }
-  }, 1000);
+//   clickable = true;
+//   molesLeft -= 1;
+//   document.querySelector('.sb__moles').innerHTML = molesLeft;
 
-});
+//   hideTimeout = setTimeout(() => hideMole(moleHead), popupLength);
+// }
 
-window.addEventListener('DOMContentLoaded', () => {
 
-  setInterval(() => {
-    const moleHeads = document.querySelectorAll('.alien8');
-    for (let moleHead of moleHeads) {
-      moleHead.classList.toggle('alien-hidden');
-    }
-  }, 1000);
+// function hideMole(mole) {
+//   clickable = false;
+//   mole.classList.add('alien-hidden');
 
-});
+//   setTimeout(popUpRandomMole, 100);
+// }
+
+// window.addEventListener('DOMContentLoaded', () => {
+//   setTimeout(popUpRandomMole, 100);
+
+//   const moleHeads = document.querySelectorAll('.alien3');
+//   for (let moleHead of moleHeads) {
+//     moleHead.classList.add('alien-hidden');
+//     moleHead.addEventListener('click', event => {
+//       if (!clickable) return;
+
+//       score += 1;
+//       document.querySelector('.sb__score').innerHTML = score;
+//       popupLength -= popupLength / 10;
+
+//       clearTimeout(hideTimeout);
+//       hideMole(event.target);
+
+//       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED
+//       event.target.classList.add('alien-hidden');
+
+//       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED FOR THE BONUS
+//       // event.target.classList.add('mole-head--whacked');
+//     });
+//   }
+// });
+
+// window.addEventListener('DOMContentLoaded', () => {
+
+//   setInterval(() => {
+//     const moleHeads = document.querySelectorAll('.mole-head');
+//     for (let moleHead of moleHeads) {
+//       moleHead.classList.toggle('mole-head--hidden');
+//     }
+//   }, 1500);
+
+// });
