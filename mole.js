@@ -59,3 +59,91 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  setInterval(() => {
+    const moleHeads = document.querySelectorAll('.alien1');
+    for (let moleHead of moleHeads) {
+      moleHead.classList.toggle('alien-hidden');
+    }
+  }, 1000);
+
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  setInterval(() => {
+    const moleHeads = document.querySelectorAll('.alien2');
+    for (let moleHead of moleHeads) {
+      moleHead.classList.toggle('alien-hidden');
+    }
+  }, 1000);
+
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  setInterval(() => {
+    const moleHeads = document.querySelectorAll('.alien3');
+    for (let moleHead of moleHeads) {
+      moleHead.classList.toggle('alien-hidden');
+    }
+  }, 1000);
+
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  setInterval(() => {
+    const moleHeads = document.querySelectorAll('.alien4');
+    for (let moleHead of moleHeads) {
+      moleHead.classList.toggle('alien-hidden');
+    }
+  }, 1000);
+
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  setInterval(() => {
+    const moleHeads = document.querySelectorAll('.alien5');
+    for (let moleHead of moleHeads) {
+      moleHead.classList.toggle('alien-hidden');
+    }
+  }, 1000);
+
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  setInterval(() => {
+    const moleHeads = document.querySelectorAll('.alien6');
+    for (let moleHead of moleHeads) {
+      moleHead.classList.toggle('alien-hidden');
+    }
+  }, 1000);
+
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  setInterval(() => {
+    const moleHeads = document.querySelectorAll('.alien7');
+    for (let moleHead of moleHeads) {
+      moleHead.classList.toggle('alien-hidden');
+    }
+  }, 1000);
+
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  setInterval(() => {
+    const moleHeads = document.querySelectorAll('.alien8');
+    for (let moleHead of moleHeads) {
+      moleHead.classList.toggle('alien-hidden');
+    }
+  }, 1000);
+
+});

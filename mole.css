@@ -5,7 +5,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
 .wgs {
   display: inline-block;
   position: relative;
@@ -14,7 +13,7 @@ body {
   overflow: hidden;
 }
 
-.alien {
+.alien1 {
   position: absolute;
   right: 54.5px;
   left: 77.5px;
@@ -23,8 +22,90 @@ body {
   transition: margin-top 0.25s;
 }
 
+.alien2 {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+.alien2 {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+.alien2 {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+.alien3 {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+.alien4 {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+.alien5 {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+.alien6 {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+.alien7 {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+.alien8 {
+  position: absolute;
+  right: 54.5px;
+  left: 77.5px;
+  height: 188px;
+  width: 188px;
+  transition: margin-top 0.25s;
+}
+
+
 .alien-hidden {
-  margin-top: 100%;
+ margin-top: 241px;
 }
 
 .ufo {
